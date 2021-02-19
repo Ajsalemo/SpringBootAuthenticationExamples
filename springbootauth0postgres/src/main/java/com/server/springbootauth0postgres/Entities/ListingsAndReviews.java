@@ -5,41 +5,137 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "listingsandreviews")
 public class ListingsAndReviews {
 	private long id;
+
+	@NotNull(message = "Listing URL cannot be empty")
+	@Size(min = 1, message = "Listing URL is too short")
 	private String listing_url;
+
+	@NotNull(message = "Name cannot be empty")
+	@Size(min = 2, message = "Name is too short")
 	private String name;
+
+	@NotNull(message = "Space cannot be empty")
+	@Size(min = 1, message = "Space is too short")
 	private String space;
+
+	@NotNull(message = "Description cannot be empty")
+	@Size(min = 1, message = "Description is too short")
 	private String description;
+
+	@NotNull(message = "Neighborhood overview cannot be empty")
+	@Size(min = 1, message = "Neighborhood overview is too short")
 	private String neighborhood_overview;
+
+	@NotNull(message = "Notes cannot be empty")
+	@Size(min = 1, message = "Notes is too short")
 	private String notes;
+
+	@NotNull(message = "Transit cannot be empty")
+	@Size(min = 1, message = "Transit is too short")
 	private String transit;
+
+	@NotNull(message = "Access cannot be empty")
+	@Size(min = 1, message = "Access is too short")
 	private String access;
+
+	@NotNull(message = "Interaction cannot be empty")
+	@Size(min = 1, message = "Interaction is too short")
 	private String interaction;
+
+	@NotNull(message = "House rules cannot be empty")
+	@Size(min = 1, message = "House rules is too short")
 	private String house_rules;
+
+	@NotNull(message = "Property type cannot be empty")
+	@Size(min = 1, message = "Property type is too short")
 	private String property_type;
+
+	@NotNull(message = "Room type cannot be empty")
+	@Size(min = 1, message = "Room type is too short")
 	private String room_type;
+
+	@NotNull(message = "Bed type cannot be empty")
+	@Size(min = 1, message = "Bed type is too short")
 	private String bed_type;
+
+	@NotNull(message = "Minimum nights cannot be empty")
+	@Size(min = 1, message = "Minimum nights is too short")
 	private String minimum_nights;
+
+	@NotNull(message = "Maximum nights cannot be empty")
+	@Size(min = 1, message = "Maximum nights is too short")
 	private String maximum_nights;
+
+	@NotNull(message = "Cancellation Policy cannot be empty")
+	@Size(min = 1, message = "Cancellation Policy is too short")
 	private String cancellation_policy;
+
+	@NotNull(message = "Last scraped cannot be empty")
+	@Size(min = 1, message = "Last scraped is too short")
 	private String last_scraped;
+
+	@NotNull(message = "Calendar last scraped cannot be empty")
+	@Size(min = 1, message = "Calendar last scraped is too short")
 	private String calendar_last_scraped;
+
+	@NotNull(message = "First review cannot be empty")
+	@Size(min = 1, message = "First review is too short")
 	private String first_review;
+
+	@NotNull(message = "Last review cannot be empty")
+	@Size(min = 1, message = "Last review is too short")
 	private String last_review;
+
+	@NotNull(message = "Accommodates cannot be empty")
+	@Min(0)
 	private Integer accommodates;
+
+	@NotNull(message = "Bedrooms cannot be empty")
+	@Min(0)
 	private Integer bedrooms;
+
+	@NotNull(message = "Beds cannot be empty")
+	@Min(0)
 	private Integer beds;
+
+	@NotNull(message = "Number of reviews cannot be empty")
+	@Min(0)
 	private Integer number_of_reviews;
+
+	@NotNull(message = "Bathrooms cannot be empty")
+	@Size(min = 1, message = "Bathrooms is too short")
 	private String bathrooms;
+
+	@NotNull(message = "Price cannot be empty")
+	@Size(min = 1, message = "Price is too short")
 	private String price;
+
+	@NotNull(message = "Amenities cannot be empty")
+	@Size(min = 1, message = "Amenities is too short")
 	private String amenities;
+
+	@NotNull(message = "Security cannot be empty")
+	@Size(min = 1, message = "Security is too short")
 	private String security_deposit;
+
+	@NotNull(message = "Cleaning fee cannot be empty")
+	@Size(min = 1, message = "Cleaning fee is too short")
 	private String cleaning_fee;
+
+	@NotNull(message = "Extra people cannot be empty")
+	@Size(min = 1, message = "Extra people is too short")
 	private String extra_people;
+
+	@NotNull(message = "Number of reviews cannot be empty")
+	@Min(0)
 	private Integer guests_included;
 
 	@Id
