@@ -1,6 +1,6 @@
 -- Create the table
 CREATE TABLE IF NOT EXISTS listingsAndReviews(
-    id INT PRIMARY KEY NOT NULL,
+    id SERIAL PRIMARY KEY NOT NULL,
     listing_url VARCHAR NOT NULL,
     name VARCHAR NOT NULL,
     space VARCHAR NOT NULL,
