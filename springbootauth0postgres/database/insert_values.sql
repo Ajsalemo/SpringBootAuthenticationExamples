@@ -34,6 +34,7 @@ INSERT INTO listingsAndReviews
     guests_included
     )
 VALUES
+<<<<<<< HEAD
         (
             'https://www.airbnb.com/rooms/1003530',
             'New York City - Upper West Side Apt',
@@ -66,6 +67,40 @@ VALUES
             '135.00',
             '0.00',
             1
+=======
+    (
+        'https://www.airbnb.com/rooms/1003530',
+        'New York City - Upper West Side Apt',
+        'Murphy bed, optional second bedroom available. Wifi available, Hulu, Netflix, TV Eat-in kitchen. Bathroom with great shower/bath.  Washer/dryer in basement.',
+        'Murphy bed, optional second bedroom available. Wifi available, Hulu, Netflix, TV Eat-in kitchen. Bathroom with great shower/bath.  Washer/dryer in basement. New York City! Great neighborhood - many terrific restaurants, bakeries, bagelries. Within easy walking distance are restaurants with the cuisines from India, Thailand, Japan, China, Mexico, South America and Europe.  As well as the many small independent stores that line Broadway, there chain stores such as Urban Outfitters (clothing), Whole Foods (groceries), Sephora (cosmetics), Michaels (crafts), and Modells (sporting goods). Equidistant to Central Park and Riverside Park which have walking/running/biking trails as well as tennis and racquet ball courts. 10-15 blocks from Columbia University between Broadway and Amsterdam. The International Hostel across the street is an airport shuttle bus and double-decker tour bus stop.  The Hostel also has services available to the neighborhood such as lectures, brochures, etc. Convenientl',
+        'Great neighborhood - many terrific restaurants, bakeries, bagelries. Within easy walking distance are restaurants with the cuisines from India, Thailand, Japan, China, Mexico, South America and Europe.  As well as the many small independent stores that line Broadway, there chain stores such as Urban Outfitters (clothing), Whole Foods (groceries), Sephora (cosmetics), Michaels (crafts), and Modells (sporting goods). Equidistant to Central Park and Riverside Park which have walking/running/biking trails as well as tennis and racquet ball courts. 10-15 blocks from Columbia University between Broadway and Amsterdam. The International Hostel across the street is an airport shuttle bus and double-decker tour bus stop.  The Hostel also has services available to the neighborhood such as lectures, brochures, etc.',
+        'My cat, Samantha, are in and out during the summer.  The apt is layed out in such a  way that each bedroom is very private.',
+        'Conveniently located near 1, 2, 3, B & C subway lines. Also buses on Columbus Avenue (downtown), Amsterdam Avenue (uptown), and Broadway (uptown/downtown). Also near origination/termination of M60 bus which goes to/from LaGuardia Airport.',
+        'New York City!',
+        'None',
+        'No smoking is permitted in the apartment. All towels that are used should be placed in the bath tub upon departure. I have a cat, Samantha, who can stay or go, whichever is preferred.   Please text me upon departure.',
+        'Apartment',
+        'Private room',
+        'Real Bed',
+        '12',
+        '360',
+        'strict_14_with_grace_period',
+        '2019-03-07T05:00:00.000+00:00',
+        '2019-03-07T05:00:00.000+00:00',
+        '2013-04-29T04:00:00.000+00:00',
+        '2018-08-12T04:00:00.000+00:00',
+        2,
+        1,
+        1,
+        70,
+        '1.0',
+        '135.00',
+        'Internet, Wifi, Air conditioning, Kitchen, Elevator, Buzzer/wireless intercom, Heating, Family/kid friendly, Washer, Dryer',
+        '0.00',
+        '135.00',
+        '0.00',
+        1
+>>>>>>> 4cb92c801d870332e36a5708130ac6fe01c99397
     ),
     (
         'https://www.airbnb.com/rooms/10006546',

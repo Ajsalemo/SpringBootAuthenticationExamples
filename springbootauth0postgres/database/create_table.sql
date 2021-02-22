@@ -9,7 +9,10 @@ CREATE TABLE IF NOT EXISTS listingsAndReviews(
     notes VARCHAR NOT NULL,
     transit VARCHAR NOT NULL,
     access VARCHAR NOT NULL,
+<<<<<<< HEAD
     interaction VARCHAR,
+=======
+>>>>>>> 4cb92c801d870332e36a5708130ac6fe01c99397
     house_rules VARCHAR NOT NULL,
     property_type VARCHAR(255) NOT NULL,
     room_type VARCHAR(255) NOT NULL,

@@ -24,10 +24,10 @@
   "beds": 8,
   "number_of_reviews": 1,
   "bathrooms": "4.0",
-  "amenities": "TV, Cable TV, Internet,Wifi, Air conditioning, Kitchen, Smoking allowed, Family/kid friendly, First aid kit, Fire extinguisher, Essentials",
   "price": "250.00",
+  "amenities": "TV, Cable TV, Internet,Wifi, Air conditioning, Kitchen, Smoking allowed, Family/kid friendly, First aid kit, Fire extinguisher, Essentials",
   "security_deposit": "0.00",
-  "cleaning_fee": "0.00",
-  "extra_people": "40.00",
+  "cleaning_fee": "40.00",
+  "extra_people": "0.00",
   "guests_included": 4
 }
