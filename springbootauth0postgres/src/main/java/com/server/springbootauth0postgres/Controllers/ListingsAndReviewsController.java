@@ -44,15 +44,16 @@ public class ListingsAndReviewsController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    // TODO - test this method
-    // Update a listing
+    // Update a listing's description
     @PutMapping("/update_listing/{id}")
-    public ResponseEntity<String> updateListingAndReview(@PathVariable(value = "id"), @RequestBody ListingsAndReviews changeListingAndReview) {
+    public ResponseEntity<ListingsAndReviews> updateListingAndReview(@PathVariable Long id,
+            @RequestBody ListingsAndReviews changeListingAndReview) {
         // Set the found List/Review to a variable
         ListingsAndReviews updatedValue = listingsAndReviewsRepostiory.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cannot find the listing with id " + id));
         // Set the updated description
         updatedValue.setDescription(changeListingAndReview.getDescription());
-        final ListingsAndReviews finalUpdatedListingAndReviews = listingsAndReviewsRepostiory.save(entity);
+        final ListingsAndReviews finalUpdatedListingAndReviews = listingsAndReviewsRepostiory.save(updatedValue);
+        return ResponseEntity.ok(finalUpdatedListingAndReviews);
     }
 }
