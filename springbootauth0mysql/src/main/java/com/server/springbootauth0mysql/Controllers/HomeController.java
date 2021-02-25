@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    @Autowired
     @GetMapping("/")
     public String homeControllerResponse() {
         return "springbootauth0mysql";
