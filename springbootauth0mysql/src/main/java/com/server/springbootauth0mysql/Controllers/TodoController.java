@@ -6,8 +6,12 @@ import com.server.springbootauth0mysql.Entities.Todos;
 import com.server.springbootauth0mysql.Repository.TodoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,5 +31,11 @@ public class TodoController {
     @GetMapping("/todo/{id}")
     public Todos findTodoById(@PathVariable Long id) {
         return todoRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Unable to find Todo Id: " + id));
+    }
+
+    @PostMapping("/add_todo")
+    public ResponseEntity<Object> addTodo(@RequestBody Todos newTodo) {
+        todoRepository.save(newTodo);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
