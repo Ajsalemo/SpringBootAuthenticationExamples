@@ -4,14 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Todos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty(message = "Todo can not be empty")
     private String todo;
+    @NotEmpty(message = "Author can not be empty")
     private String author;
+    @NotNull(message = "Completed can not be empty")
     private Boolean completed;
 
     public Long getId() {
@@ -46,6 +51,6 @@ public class Todos {
         this.completed = completed;
     }
 
-	public void deleteById(Long id2) {
-	}
+    public void deleteById(Long id2) {
+    }
 }

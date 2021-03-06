@@ -1,7 +1,5 @@
 package com.server.springbootauth0mysql.Controllers;
 
-import java.util.Optional;
-
 import javax.persistence.EntityNotFoundException;
 
 import com.server.springbootauth0mysql.Entities.Todos;

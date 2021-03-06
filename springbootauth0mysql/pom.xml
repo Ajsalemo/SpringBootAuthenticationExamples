@@ -52,7 +52,7 @@
 			<artifactId>spring-security-oauth2-jose</artifactId>
 			<version>5.4.2</version>
 		</dependency>
-		<!-- Hibernate Validation -->
+		<!-- Validation -->
 		<dependency> 
 			<groupId>org.springframework.boot</groupId> 
 			<artifactId>spring-boot-starter-validation</artifactId> 
