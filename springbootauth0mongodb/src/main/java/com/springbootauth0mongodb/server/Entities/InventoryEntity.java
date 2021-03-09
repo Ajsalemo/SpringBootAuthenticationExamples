@@ -11,11 +11,6 @@ public class InventoryEntity {
     public String item;
     public Integer qty;
 
-    public void Inventory(String item, Integer qty) {
-        this.item = item;
-        this.qty = qty;
-    }
-
     public String getId() {
         return id;
     }
