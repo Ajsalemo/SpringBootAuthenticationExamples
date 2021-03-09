@@ -6,13 +6,9 @@ public class InventoryEntity {
 
     @Id
     public String id;
-    
+
     public String item;
     public Integer qty;
-
-    public void Inventory () { 
-        // Empty method initialization
-    }
 
     public void Inventory(String item, Integer qty) {
         this.item = item;
