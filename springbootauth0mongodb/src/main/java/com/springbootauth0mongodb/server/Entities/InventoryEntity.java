@@ -1,7 +1,8 @@
 package com.springbootauth0mongodb.server.Entities;
 
 import org.springframework.data.annotation.Id;
-
+import org.springframework.data.mongodb.core.mapping.Document;
+@Document(collection = "inventory")
 public class InventoryEntity {
 
     @Id
