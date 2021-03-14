@@ -6,6 +6,7 @@ import com.springbootauth0mongodb.server.Repository.InventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,6 +45,12 @@ public class InventoryController {
         InventoryEntity savedInventory = inventoryRepository.save(_getNewInventoryAdded);
         // Return with a HTTP 201(created) and the new Object on the response
         return new ResponseEntity<InventoryEntity>(savedInventory, HttpStatus.CREATED);
-
     }
+
+    @DeleteMapping("/delete_inventory/{id}")
+    public ResponseEntity<String> deleteInventoryById(@PathVariable String id) {
+        inventoryRepository.deleteById(id);
+        return new ResponseEntity<String>(id, HttpStatus.OK);
+    }
+
 }
