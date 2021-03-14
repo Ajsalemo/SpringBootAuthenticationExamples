@@ -29,7 +29,7 @@ public class InventoryController {
     // Find an item by ID
     @GetMapping("/inventory/{id}")
     public InventoryEntity findInventoryById(@PathVariable String id) throws Exception {
-        return inventoryRepository.findById(id).orElseThrow(() -> new Exception("Item not found with ID:" + id));
+        return inventoryRepository.findById(id).orElseThrow(() -> new Exception("Item not found with ID: " + id));
     }
 
     // Add an item
@@ -48,8 +48,11 @@ public class InventoryController {
     }
 
     @DeleteMapping("/delete_inventory/{id}")
-    public ResponseEntity<String> deleteInventoryById(@PathVariable String id) {
+    public ResponseEntity<String> deleteInventoryById(@PathVariable String id) throws Exception {
+        // Find the item by ID - if it doesn't exist throw an Exception
+        inventoryRepository.findById(id).orElseThrow(() -> new Exception("Item not found with ID: " + id));
         inventoryRepository.deleteById(id);
+        // Return the deleted ID and an HTTP 200 (ok) if successful
         return new ResponseEntity<String>(id, HttpStatus.OK);
     }
 
