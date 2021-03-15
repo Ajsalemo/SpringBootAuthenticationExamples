@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -56,4 +57,18 @@ public class InventoryController {
         return new ResponseEntity<String>(id, HttpStatus.OK);
     }
 
+    @PutMapping("/update_inventory/{id}") 
+    public ResponseEntity<InventoryEntity> updateInventoryById(@PathVariable String id, @RequestBody InventoryEntity updatedInventory) throws Exception {
+        // Find the item by ID - if it doesn't exist throw an Exception
+        InventoryEntity inventory = inventoryRepository.findById(id).orElseThrow(() -> new Exception("Item not found with ID: " + id));
+        // Updating existing fields
+        inventory.setName(updatedInventory.getName());
+        inventory.setQuantity(updatedInventory.getQuantity());
+        inventory.setTags(updatedInventory.getTags());
+        inventory.setPrice(updatedInventory.getPrice());
+        // Save the updated object to the repository
+        inventoryRepository.save(updatedInventory);
+        // Return the new object in the response
+        return new ResponseEntity<InventoryEntity>(updatedInventory, HttpStatus.OK);
+    }
 }
