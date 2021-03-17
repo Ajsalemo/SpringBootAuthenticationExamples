@@ -44,3 +44,4 @@ The PostgreSQL example under the `springbootauth0postgres` directory is a Spring
 - <b>'/find_by_id/{id}'</b> - A `GET` request. Find a AirBNB listing by ID passed into the URL.
 - <b>'/add_listing'</b> - A `POST` request. Accepts a JSON object with the proper fields to add an new AirBNB listing.
 - <b>'/update_listing/{id}</b> - A `PUT` request. Accepts the ID passed into the URL of a known AirBNB listing to update the listing.
+- <b>'/delete_listing/{id}</b> - A `DELETE` request. Accepts the ID passed into the URL of a known AirBNB listing to delete the listing.
