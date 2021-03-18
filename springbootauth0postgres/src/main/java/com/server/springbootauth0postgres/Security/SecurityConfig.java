@@ -24,14 +24,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.authorizeRequests()
-      .mvcMatchers(HttpMethod.GET, "/").permitAll() // GET requests don't need auth
-      .anyRequest()
-      .authenticated()
-      .and()
-      .oauth2ResourceServer()
-      .jwt()
-      .decoder(jwtDecoder());
+    // Allow Swagger to be accessed publicly
+    http.authorizeRequests().antMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources",
+        "/swagger-resources/configuration/ui", "/swagger-resources/configuration/security").permitAll();
+
+    http.authorizeRequests().mvcMatchers(HttpMethod.GET, "/").permitAll() // GET requests don't need auth
+        .anyRequest().authenticated().and().oauth2ResourceServer().jwt().decoder(jwtDecoder());
   }
 
   JwtDecoder jwtDecoder() {
