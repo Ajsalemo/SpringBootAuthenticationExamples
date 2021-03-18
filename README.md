@@ -3,7 +3,12 @@ Different examples of Spring Boot REST API's secured with Auth0 connecting to va
 
 <br>
 
-All samples are REST API's secured by [Auth0](https://auth0.com/). The only accessible path on these API's are the root path '/'. A `Authorization` header with your `'Bearer xxx...'` token as a value from Auth0 must be passed into the protected routes, or else a HTTP 401 occurs. Reference this [link](https://auth0.com/blog/spring-boot-authorization-tutorial-secure-an-api-java/) for more information. These samples can be ran locally or deployed, both containerized and non containerized. Seed data is included under the `database` directory in the projects. These were created and used with Maven in mind. Run `mvn clean package` and `mvn spring-boot:run` in the directory of the `pom.xml` to start.
+All samples are REST API's secured by [Auth0](https://auth0.com/). The only accessible path on these API's are the root path '/' and '/swagger-ui/. A `Authorization` header with your `'Bearer xxx...'` token as a value from Auth0 must be passed into the protected routes, or else a HTTP 401 occurs. Reference this [link](https://auth0.com/blog/spring-boot-authorization-tutorial-secure-an-api-java/) for more information. These samples can be ran locally or deployed, both containerized and non containerized. Seed data is included under the `database` directory in the projects. These were created and used with Maven in mind. Run `mvn clean package` and `mvn spring-boot:run` in the directory of the `pom.xml` to start.
+
+<br>
+
+#### Swagger
+All examples have [Swagger](https://swagger.io/) v3.0.0 implemented. The UI can be accessed from the '/swagger-ui/' path. For example, localhost:8080/swagger-ui/.
 
 <br>
 
