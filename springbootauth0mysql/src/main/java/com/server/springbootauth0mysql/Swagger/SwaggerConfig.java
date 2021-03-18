@@ -1,4 +1,4 @@
-package com.springbootauth0mongodb.server.Swagger;
+package com.server.springbootauth0mysql.Swagger;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
